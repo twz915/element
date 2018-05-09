@@ -111,6 +111,7 @@
           if (newVal !== undefined && isNaN(newVal)) return;
           if (newVal >= this.max) newVal = this.max;
           if (newVal <= this.min) newVal = this.min;
+          if ((newVal- this.min) % step !== 0)) return;
           this.currentValue = newVal;
           this.$emit('input', newVal);
         }
